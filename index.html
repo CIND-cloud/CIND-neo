@@ -670,6 +670,14 @@ tbody tr:last-child td{border-bottom:none}
                 <label data-zh="首個財政年度結束日 (YYYY-MM-DD)" data-en="First Year End Date (YYYY-MM-DD)" style="white-space: nowrap;">首個財政年度結束日 (YYYY-MM-DD)</label>
                 <input type="text" id="yearEndDate" placeholder="e.g. 2025-03-31">
               </div>
+              <!-- ✅ 新增：會計準則選擇 -->
+              <div class="field" style="width:220px;">
+                <label data-zh="會計準則" data-en="Accounting Standard">會計準則</label>
+                <select id="accountingStandard" style="padding:10px 12px; font-size:14px; font-weight:700; font-family:var(--font-sans); border:var(--border); border-radius:var(--r-sm); background:#fff; color:var(--black); outline:none; min-width:0;">
+                  <option value="IFRS" data-zh="IFRS (國際財務報導準則)" data-en="IFRS (International)">IFRS (國際財務報導準則)</option>
+                  <option value="USGAAP" data-zh="US GAAP (美國公認會計原則)" data-en="US GAAP">US GAAP (美國公認會計原則)</option>
+                </select>
+              </div>
               <button id="confirmCompanyBtn" class="btn btn-outline" onclick="confirmYearEnd()" data-zh="確認設定" data-en="Confirm Settings">確認設定</button>
               <button id="editCompanyBtn" class="btn btn-edit" style="display:none;" onclick="unlockCompanyInfo()" data-zh="✏️ 修改" data-en="✏️ Edit">✏️ 修改</button>
             </div>
